@@ -1,0 +1,47 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="XML.Help"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot ist das Stammraster, in dem alle anderen Seiteninhalte platziert werden-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel enthält den Namen der Anwendung und den Seitentitel-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28" d:IsLocked="True">
+            <TextBlock Text="SearCHemicals" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Help" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - zusätzliche Inhalte hier platzieren-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<ScrollViewer HorizontalAlignment="Left" Height="607" VerticalAlignment="Top" Width="456">
+        		<StackPanel x:Name="stackPanel" HorizontalAlignment="Left" Height="716" VerticalAlignment="Top" Width="456">
+        			<TextBlock TextWrapping="Wrap" Text="Query" Height="42" FontSize="26.667"/>
+        			<TextBlock TextWrapping="Wrap" Text="Enter the name of the chemical that you want to look up. You can start the lookup by pressing the search button or simply by pressing the enter key at the on-screen keyboard."/>
+        			<TextBlock TextWrapping="Wrap" Text="Results" Height="42" FontSize="26.667" Margin="0,20,0,0"/>
+        			<TextBlock TextWrapping="Wrap" Text="You will get the IUPAC name of your search term and the structural formula.  Furthermore you can save the structural formula to your media library and/or share it.  Pressing the trash can deletes the current results and starts an new query. You can also add search results to your list of favorite molecules by pressing the star."/>
+        			<TextBlock TextWrapping="Wrap" Text="Search History" Height="42" FontSize="26.667" Margin="0,20,0,0"/>
+        			<TextBlock TextWrapping="Wrap" Text="In the search history you can have a look at your last lookups and even restart an lookup using your old search terms."/>
+                    <TextBlock TextWrapping="Wrap" Text="Favorites" Height="42" FontSize="26.667" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Add molecules to your favorites to have faster access to often used structural formulas. Again, you can restart an new lookup from within your list of favorites."/>
+                </StackPanel>
+        	</ScrollViewer>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

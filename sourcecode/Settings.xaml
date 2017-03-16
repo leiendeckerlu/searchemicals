@@ -1,0 +1,63 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Controls="clr-namespace:Coding4Fun.Toolkit.Controls;assembly=Coding4Fun.Toolkit.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:adduplex="clr-namespace:AdDuplex;assembly=AdDuplex.WindowsPhone"
+    x:Class="XML.Settings"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+
+    <!--LayoutRoot ist das Stammraster, in dem alle anderen Seiteninhalte platziert werden-->
+	<Grid x:Name="LayoutRoot" Background="Transparent">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="Auto"/>
+			<RowDefinition Height="*"/>
+		</Grid.RowDefinitions>
+
+		<!--TitlePanel enthält den Namen der Anwendung und den Seitentitel-->
+		<StackPanel Grid.Row="0" Margin="12,17,0,28" d:IsLocked="True">
+			<TextBlock Text="SearCHemicals" Style="{StaticResource PhoneTextNormalStyle}"/>
+			<TextBlock Text="Settings" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+		</StackPanel>
+
+        <!--ContentPanel - zusätzliche Inhalte hier platzieren-->
+		<Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+			<StackPanel HorizontalAlignment="Left" Height="597" VerticalAlignment="Top" Width="456">
+				<StackPanel Height="110">
+					<TextBlock TextWrapping="Wrap" Text="Show stereochemistry (R/S)" FontSize="26.667" Height="40" VerticalAlignment="Top"/>
+					<toolkit:ToggleSwitch x:Name="StereoToggle" Content="On" Height="103" Margin="0,-20,0,0" Click="StereoToggle_Click"/>
+				</StackPanel>
+				<StackPanel Height="110">
+					<TextBlock TextWrapping="Wrap" Text="Show all hydrogen atoms" FontSize="26.667" Height="40" VerticalAlignment="Top"/>
+					<toolkit:ToggleSwitch x:Name="HydrogenToggle" Content="On" Height="138" Margin="0,-20,0,0" Click="HydrogenToggle_Click"/>
+				</StackPanel>
+				<StackPanel Height="110">
+					<TextBlock TextWrapping="Wrap" Text="Show all carbon atoms" FontSize="26.667" Height="40" VerticalAlignment="Top"/>
+					<toolkit:ToggleSwitch x:Name="CarbonToggle" Content="On" Height="115" Margin="0,-20,0,0" Click="CarbonToggle_Click"/>
+				</StackPanel>
+				<StackPanel Height="110">
+					<!--Button Content="Delete search history" Click="Button_Click"/-->
+					<!--TextBlock TextWrapping="Wrap" Text="Save molecule to library" FontSize="26.667" Height="36" VerticalAlignment="Top"/-->
+					<!--toolkit:ToggleSwitch x:Name="LibraryToggle" Content="On" Margin="0,-20,0,0" Click="LibraryToggle_Click"/-->
+				</StackPanel>
+                <StackPanel Height="166">
+					<Border BorderBrush="Black" BorderThickness="1" Height="77"/>
+					<adduplex:AdControl x:Name="adDuplexAd" AppId="76131" VerticalAlignment="Top" Width="Auto" Height="80" Margin="-12,0"/>
+				</StackPanel>
+            </StackPanel>
+
+		</Grid>
+	</Grid>
+
+
+</phone:PhoneApplicationPage>
