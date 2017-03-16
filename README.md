@@ -3,6 +3,7 @@ SearCHemicals
 
 SearCHemicals is a simple IUPAC structure lookup app.
 ------------------------
+SearCHemicals uses the Chemical Identifier Resolver hosted at http://cactus.nci.nih.gov/.
 
 Key features:
 ------------------------
@@ -46,10 +47,9 @@ Version 1.0.0.0:
 ------------------------
 • Initial release
 
-SearCHemicals uses the Chemical Identifier Resolver hosted at http://cactus.nci.nih.gov/.
-
+Contact:
+------------------------
 If you have questions feel free to mail searchemicals@outlook.com
-
 
 BugSense Implementation
 ------------------------
