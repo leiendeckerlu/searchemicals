@@ -5,6 +5,7 @@ SearCHemicals is a simple IUPAC structure lookup app.
 ------------------------
 
 Key features:
+------------------------
 •  picture of skeletal formula
 
 •  IUPAC name
@@ -19,8 +20,9 @@ Key features:
 
 •  share molecule
 
-Version 2.0.0.0:
 
+Version 2.0.0.0:
+------------------------
 • Bugfixes & Updated librarys
 
 • Performance improvements
@@ -29,16 +31,19 @@ Version 2.0.0.0:
 
 • favorite molecules
 
-Version 1.1.0.1:
 
+Version 1.1.0.1:
+------------------------
 • Bugfixes & Updated librarys
 
-Version 1.1.0.0:
 
+Version 1.1.0.0:
+------------------------
 • Bugfixes & Performance improvements
 
-Version 1.0.0.0:
 
+Version 1.0.0.0:
+------------------------
 • Initial release
 
 SearCHemicals uses the Chemical Identifier Resolver hosted at http://cactus.nci.nih.gov/.
