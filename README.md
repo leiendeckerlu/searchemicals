@@ -53,4 +53,4 @@ If you have questions feel free to mail searchemicals@outlook.com
 
 BugSense Implementation
 ------------------------
-Automatic BugSense Issue reporting, inclusive application version, date and time as well as crash dump.
+Automatic BugSense Issue reporting, including application version, date and time as well as crash dump.
